@@ -267,10 +267,10 @@ public class BasicRowProcessor implements RowProcessor {
 
         for (int i = 1; i <= cols; i++) {
             String propKey = rsmd.getColumnLabel(i);
-            if (null == propKey || 0 == propKey.length()) {
+            if (propKey == null || 0 == propKey.length()) {
               propKey = rsmd.getColumnName(i);
             }
-            if (null == propKey || 0 == propKey.length()) {
+            if (propKey == null || 0 == propKey.length()) {
               // The column index can't be null
               propKey = Integer.toString(i);
             }
