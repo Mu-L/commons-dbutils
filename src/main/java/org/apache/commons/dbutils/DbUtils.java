@@ -50,7 +50,7 @@ public final class DbUtils {
         /**
          * Creates a new JDBC Driver that adapts a JDBC Driver loaded dynamically.
          *
-         * @param adapted the adapted JDBC Driver loaded dynamically.
+         * @param adapted The adapted JDBC Driver loaded dynamically.
          */
         public DriverProxy(final Driver adapted) {
             this.adapted = adapted;
@@ -250,7 +250,7 @@ public final class DbUtils {
      * Loads and registers a database driver class.
      * If this succeeds, it returns true, else it returns false.
      *
-     * @param classLoader the class loader used to load the driver class
+     * @param classLoader The class loader used to load the driver class
      * @param driverClassName of driver to load
      * @return boolean {@code true} if the driver was found, otherwise {@code false}
      * @since 1.4

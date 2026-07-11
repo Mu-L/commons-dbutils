@@ -721,8 +721,8 @@ public class QueryRunner extends AbstractQueryRunner {
      * {@code params} array using the OUT parameter values from the
      * {@code stmt}.
      *
-     * @param stmt the statement from which to retrieve OUT parameter values
-     * @param params the parameter array for the statement invocation
+     * @param stmt The statement from which to retrieve OUT parameter values
+     * @param params The parameter array for the statement invocation
      * @throws SQLException when the value could not be retrieved from the
      * statement.
      */

@@ -402,7 +402,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getAsciiStream} method.
      *
-     * @param nullAsciiStream the value
+     * @param nullAsciiStream The value
      */
     public void setNullAsciiStream(final InputStream nullAsciiStream) {
         this.nullAsciiStream = nullAsciiStream;
@@ -412,7 +412,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getBigDecimal} method.
      *
-     * @param nullBigDecimal the value
+     * @param nullBigDecimal The value
      */
     public void setNullBigDecimal(final BigDecimal nullBigDecimal) {
         this.nullBigDecimal = nullBigDecimal;
@@ -422,7 +422,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getBinaryStream} method.
      *
-     * @param nullBinaryStream the value
+     * @param nullBinaryStream The value
      */
     public void setNullBinaryStream(final InputStream nullBinaryStream) {
         this.nullBinaryStream = nullBinaryStream;
@@ -432,7 +432,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getBlob} method.
      *
-     * @param nullBlob the value
+     * @param nullBlob The value
      */
     public void setNullBlob(final Blob nullBlob) {
         this.nullBlob = nullBlob;
@@ -442,7 +442,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getBoolean} method.
      *
-     * @param nullBoolean the value
+     * @param nullBoolean The value
      */
     public void setNullBoolean(final boolean nullBoolean) {
         this.nullBoolean = nullBoolean;
@@ -452,7 +452,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getByte} method.
      *
-     * @param nullByte the value
+     * @param nullByte The value
      */
     public void setNullByte(final byte nullByte) {
         this.nullByte = nullByte;
@@ -462,7 +462,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getBytes} method.
      *
-     * @param nullBytes the value
+     * @param nullBytes The value
      */
     public void setNullBytes(final byte[] nullBytes) {
         if (nullBytes != null) {
@@ -476,7 +476,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getCharacterStream} method.
      *
-     * @param nullCharacterStream the value
+     * @param nullCharacterStream The value
      */
     public void setNullCharacterStream(final Reader nullCharacterStream) {
         this.nullCharacterStream = nullCharacterStream;
@@ -486,7 +486,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getClob} method.
      *
-     * @param nullClob the value
+     * @param nullClob The value
      */
     public void setNullClob(final Clob nullClob) {
         this.nullClob = nullClob;
@@ -496,7 +496,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getDate} method.
      *
-     * @param nullDate the value
+     * @param nullDate The value
      */
     public void setNullDate(final Date nullDate) {
         this.nullDate = nullDate != null ? new Date(nullDate.getTime()) : null;
@@ -506,7 +506,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getDouble} method.
      *
-     * @param nullDouble the value
+     * @param nullDouble The value
      */
     public void setNullDouble(final double nullDouble) {
         this.nullDouble = nullDouble;
@@ -516,7 +516,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getFloat} method.
      *
-     * @param nullFloat the value
+     * @param nullFloat The value
      */
     public void setNullFloat(final float nullFloat) {
         this.nullFloat = nullFloat;
@@ -526,7 +526,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getInt} method.
      *
-     * @param nullInt the value
+     * @param nullInt The value
      */
     public void setNullInt(final int nullInt) {
         this.nullInt = nullInt;
@@ -536,7 +536,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getLong} method.
      *
-     * @param nullLong the value
+     * @param nullLong The value
      */
     public void setNullLong(final long nullLong) {
         this.nullLong = nullLong;
@@ -546,7 +546,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getObject} method.
      *
-     * @param nullObject the value
+     * @param nullObject The value
      */
     public void setNullObject(final Object nullObject) {
         this.nullObject = nullObject;
@@ -556,7 +556,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getRef} method.
      *
-     * @param nullRef the value
+     * @param nullRef The value
      */
     public void setNullRef(final Ref nullRef) {
         this.nullRef = nullRef;
@@ -566,7 +566,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getShort} method.
      *
-     * @param nullShort the value
+     * @param nullShort The value
      */
     public void setNullShort(final short nullShort) {
         this.nullShort = nullShort;
@@ -576,7 +576,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getString} method.
      *
-     * @param nullString the value
+     * @param nullString The value
      */
     public void setNullString(final String nullString) {
         this.nullString = nullString;
@@ -586,7 +586,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getTime} method.
      *
-     * @param nullTime the value
+     * @param nullTime The value
      */
     public void setNullTime(final Time nullTime) {
         this.nullTime = nullTime != null ? new Time(nullTime.getTime()) : null;
@@ -596,7 +596,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getTimestamp} method.
      *
-     * @param nullTimestamp the value
+     * @param nullTimestamp The value
      */
     public void setNullTimestamp(final Timestamp nullTimestamp) {
         if (nullTimestamp != null) {
@@ -611,7 +611,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Sets the value to return when a SQL null is encountered as the result of
      * invoking a {@code getURL} method.
      *
-     * @param nullURL the value
+     * @param nullURL The value
      */
     public void setNullURL(final URL nullURL) {
         this.nullURL = nullURL;

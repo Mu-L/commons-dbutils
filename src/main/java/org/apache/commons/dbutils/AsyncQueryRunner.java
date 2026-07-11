@@ -225,7 +225,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param pmdKnownBroken Some drivers don't support {@link java.sql.ParameterMetaData#getParameterType(int)};
      * if {@code pmdKnownBroken} is set to true, we won't even try it; if false, we'll try it,
      * and if it breaks, we'll remember not to use it again.
-     * @param executorService the {@code ExecutorService} instance used to run JDBC invocations concurrently.
+     * @param executorService The {@code ExecutorService} instance used to run JDBC invocations concurrently.
      * @deprecated Use {@link #AsyncQueryRunner(ExecutorService, QueryRunner)} instead.
      * Constructor for AsyncQueryRunner that controls the use of {@code ParameterMetaData}.
      *
@@ -240,7 +240,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param pmdKnownBroken Some drivers don't support {@link java.sql.ParameterMetaData#getParameterType(int)};
      * if {@code pmdKnownBroken} is set to true, we won't even try it; if false, we'll try it,
      * and if it breaks, we'll remember not to use it again.
-     * @param executorService the {@code ExecutorService} instance used to run JDBC invocations concurrently.
+     * @param executorService The {@code ExecutorService} instance used to run JDBC invocations concurrently.
      * @deprecated Use {@link #AsyncQueryRunner(ExecutorService, QueryRunner)} instead.
      * Constructor for AsyncQueryRunner that take a {@code DataSource} and controls the use of {@code ParameterMetaData}.
      * Methods that do not take a {@code Connection} parameter will retrieve connections from this
@@ -256,7 +256,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
 
     /**
      * @param ds The {@code DataSource} to retrieve connections from.
-     * @param executorService the {@code ExecutorService} instance used to run JDBC invocations concurrently.
+     * @param executorService The {@code ExecutorService} instance used to run JDBC invocations concurrently.
      * @deprecated Use {@link #AsyncQueryRunner(ExecutorService, QueryRunner)} instead.
      * Constructor for AsyncQueryRunner that takes a {@code DataSource}.
      *
@@ -272,7 +272,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
     /**
      * Constructor for AsyncQueryRunner.
      *
-     * @param executorService the {@code ExecutorService} instance used to run JDBC invocations concurrently.
+     * @param executorService The {@code ExecutorService} instance used to run JDBC invocations concurrently.
      */
     public AsyncQueryRunner(final ExecutorService executorService) {
         this(null, false, executorService);
@@ -281,8 +281,8 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
     /**
      * Constructor for AsyncQueryRunner which uses a provided ExecutorService and underlying QueryRunner.
      *
-     * @param executorService the {@code ExecutorService} instance used to run JDBC invocations concurrently.
-     * @param queryRunner the {@code QueryRunner} instance to use for the queries.
+     * @param executorService The {@code ExecutorService} instance used to run JDBC invocations concurrently.
+     * @param queryRunner The {@code QueryRunner} instance to use for the queries.
      * @since 1.5
      */
     public AsyncQueryRunner(final ExecutorService executorService, final QueryRunner queryRunner) {
