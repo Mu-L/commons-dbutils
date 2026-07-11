@@ -83,7 +83,7 @@ public class BaseTestCase {
     /**
      * Creates a freshly initialized ResultSet.
      *
-     * @return a freshly initialized ResultSet.
+     * @return A freshly initialized ResultSet.
      */
     protected ResultSet createMockResultSet() {
         return MockResultSet.create(META_DATA, ROW_ARRAY, false);

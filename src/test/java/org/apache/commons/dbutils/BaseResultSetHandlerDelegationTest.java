@@ -97,7 +97,7 @@ class BaseResultSetHandlerDelegationTest extends BaseTestCase {
     /**
      * Creates a freshly initialized ResultSet.
      *
-     * @return a freshly initialized ResultSet.
+     * @return A freshly initialized ResultSet.
      */
     @Override
     protected ResultSet createMockResultSet() {

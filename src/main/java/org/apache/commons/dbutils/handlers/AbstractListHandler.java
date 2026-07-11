@@ -46,7 +46,7 @@ public abstract class AbstractListHandler<T> implements ResultSetHandler<List<T>
      *
      * @see #handleRow(ResultSet)
      * @param resultSet {@code ResultSet} to process.
-     * @return a list of all rows in the result set
+     * @return A list of all rows in the result set
      * @throws SQLException error occurs
      */
     @Override

@@ -39,7 +39,7 @@ public class ResultSetIterator implements Iterator<Object[]> {
      * Generates an {@code Iterable}, suitable for use in for-each loops.
      *
      * @param resultSet Wrap this {@code ResultSet} in an {@code Iterator}.
-     * @return an {@code Iterable}, suitable for use in for-each loops.
+     * @return An {@code Iterable}, suitable for use in for-each loops.
      */
     public static Iterable<Object[]> iterable(final ResultSet resultSet) {
         return () -> new ResultSetIterator(resultSet);

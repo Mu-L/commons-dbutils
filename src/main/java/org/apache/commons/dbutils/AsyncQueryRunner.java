@@ -68,7 +68,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
         /**
          * The actual call to executeBatch.
          *
-         * @return an array of update counts containing one element for each command in the batch.
+         * @return An array of update counts containing one element for each command in the batch.
          * @throws SQLException if a database access error occurs or one of the commands sent to the database fails.
          * @see PreparedStatement#executeBatch()
          */
@@ -128,7 +128,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
         /**
          * The actual call to {@code handle()} method.
          *
-         * @return an array of update counts containing one element for each command in the batch.
+         * @return An array of update counts containing one element for each command in the batch.
          * @throws SQLException if a database access error occurs.
          * @see ResultSetHandler#handle(ResultSet)
          */
