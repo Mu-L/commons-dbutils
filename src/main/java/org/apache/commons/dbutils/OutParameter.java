@@ -74,7 +74,7 @@ public class OutParameter<T> {
     /**
      * Gets the Java class for this OUT parameter.
      *
-     * @return the Java class for this OUT parameter.
+     * @return The Java class for this OUT parameter.
      */
     public Class<T> getJavaType() {
         return javaType;
@@ -83,7 +83,7 @@ public class OutParameter<T> {
     /**
      * Gets the JDBC SQL type for this OUT parameter.
      *
-     * @return the JDBC SQL type for this OUT parameter.
+     * @return The JDBC SQL type for this OUT parameter.
      */
     public int getSqlType() {
         return sqlType;
@@ -93,7 +93,7 @@ public class OutParameter<T> {
      * Gets the value of the OUT parameter.  After the stored procedure has
      * been executed, the value is the value returned via this parameter.
      *
-     * @return the value of the OUT parameter.
+     * @return The value of the OUT parameter.
      */
     public T getValue() {
         return value;

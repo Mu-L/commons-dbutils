@@ -451,7 +451,7 @@ public abstract class AbstractQueryRunner {
      *
      * @param stmt
      *            PreparedStatement of which to query the metadata of parameters
-     * @return the metadata of parameters
+     * @return The metadata of parameters
      * @throws SQLException
      *            if a database access error occurs
      */
@@ -474,7 +474,7 @@ public abstract class AbstractQueryRunner {
      * false, we'll try it, and if it breaks, we'll remember not to use it
      * again.
      *
-     * @return the flag to skip (or not)
+     * @return The flag to skip (or not)
      *         {@link ParameterMetaData#getParameterType(int)}
      * @since 1.4
      */

@@ -156,7 +156,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getAsciiStream} method.
      *
-     * @return the value
+     * @return The value
      */
     public InputStream getNullAsciiStream() {
         return this.nullAsciiStream;
@@ -166,7 +166,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getBigDecimal} method.
      *
-     * @return the value
+     * @return The value
      */
     public BigDecimal getNullBigDecimal() {
         return this.nullBigDecimal;
@@ -176,7 +176,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getBinaryStream} method.
      *
-     * @return the value
+     * @return The value
      */
     public InputStream getNullBinaryStream() {
         return this.nullBinaryStream;
@@ -186,7 +186,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getBlob} method.
      *
-     * @return the value
+     * @return The value
      */
     public Blob getNullBlob() {
         return this.nullBlob;
@@ -196,7 +196,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getBoolean} method.
      *
-     * @return the value
+     * @return The value
      */
     public boolean getNullBoolean() {
         return this.nullBoolean;
@@ -206,7 +206,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getByte} method.
      *
-     * @return the value
+     * @return The value
      */
     public byte getNullByte() {
         return this.nullByte;
@@ -216,7 +216,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getBytes} method.
      *
-     * @return the value
+     * @return The value
      */
     public byte[] getNullBytes() {
         if (this.nullBytes == null) {
@@ -229,7 +229,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getCharacterStream} method.
      *
-     * @return the value
+     * @return The value
      */
     public Reader getNullCharacterStream() {
         return this.nullCharacterStream;
@@ -239,7 +239,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getClob} method.
      *
-     * @return the value
+     * @return The value
      */
     public Clob getNullClob() {
         return this.nullClob;
@@ -249,7 +249,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getDate} method.
      *
-     * @return the value
+     * @return The value
      */
     public Date getNullDate() {
         return this.nullDate != null ? new Date(this.nullDate.getTime()) : null;
@@ -259,7 +259,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getDouble} method.
      *
-     * @return the value
+     * @return The value
      */
     public double getNullDouble() {
         return this.nullDouble;
@@ -269,7 +269,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getFloat} method.
      *
-     * @return the value
+     * @return The value
      */
     public float getNullFloat() {
         return this.nullFloat;
@@ -279,7 +279,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getInt} method.
      *
-     * @return the value
+     * @return The value
      */
     public int getNullInt() {
         return this.nullInt;
@@ -289,7 +289,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getLong} method.
      *
-     * @return the value
+     * @return The value
      */
     public long getNullLong() {
         return this.nullLong;
@@ -299,7 +299,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getObject} method.
      *
-     * @return the value
+     * @return The value
      */
     public Object getNullObject() {
         return this.nullObject;
@@ -309,7 +309,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getRef} method.
      *
-     * @return the value
+     * @return The value
      */
     public Ref getNullRef() {
         return this.nullRef;
@@ -319,7 +319,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getShort} method.
      *
-     * @return the value
+     * @return The value
      */
     public short getNullShort() {
         return this.nullShort;
@@ -329,7 +329,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getString} method.
      *
-     * @return the value
+     * @return The value
      */
     public String getNullString() {
         return this.nullString;
@@ -339,7 +339,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getTime} method.
      *
-     * @return the value
+     * @return The value
      */
     public Time getNullTime() {
         return this.nullTime != null ? new Time(this.nullTime.getTime()) : null;
@@ -349,7 +349,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getTimestamp} method.
      *
-     * @return the value
+     * @return The value
      */
     public Timestamp getNullTimestamp() {
         if (this.nullTimestamp == null) {
@@ -365,7 +365,7 @@ public class SqlNullCheckedResultSet implements InvocationHandler {
      * Returns the value when a SQL null is encountered as the result of
      * invoking a {@code getURL} method.
      *
-     * @return the value
+     * @return The value
      */
     public URL getNullURL() {
         return this.nullURL;

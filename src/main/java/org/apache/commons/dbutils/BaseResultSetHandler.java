@@ -115,7 +115,7 @@ public abstract class BaseResultSetHandler<T> implements ResultSetHandler<T>, Re
     /**
      * Gets the underlying result set.
      *
-     * @return the underlying result set.
+     * @return The underlying result set.
      */
     protected final ResultSet getAdaptedResultSet() {
         return resultSet;

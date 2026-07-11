@@ -461,7 +461,7 @@ public class BeanProcessor {
      * @param rs ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
      * @throws SQLException if a database access error occurs
-     * @return the newly created bean
+     * @return The newly created bean
      */
     public <T> T toBean(final ResultSet rs, final Class<? extends T> type) throws SQLException {
         final T bean = this.newInstance(type);
@@ -500,7 +500,7 @@ public class BeanProcessor {
      * @param resultSet ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
      * @throws SQLException if a database access error occurs
-     * @return the newly created List of beans
+     * @return The newly created List of beans
      */
     public <T> List<T> toBeanList(final ResultSet resultSet, final Class<? extends T> type) throws SQLException {
         final List<T> results = new ArrayList<>();
