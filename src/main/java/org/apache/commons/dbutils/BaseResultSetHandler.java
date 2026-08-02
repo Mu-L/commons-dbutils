@@ -519,7 +519,7 @@ public abstract class BaseResultSetHandler<T> implements ResultSetHandler<T>, Re
      * Turn the {@code ResultSet} into an Object.
      *
      * @return An Object initialized with {@code ResultSet} data
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @see ResultSetHandler#handle(ResultSet)
      */
     protected abstract T handle() throws SQLException;

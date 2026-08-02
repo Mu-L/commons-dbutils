@@ -117,7 +117,7 @@ public class BeanProcessor {
      * @param target The object to set the property on.
      * @param prop The property to set.
      * @param value The value to pass into the setter.
-     * @throws SQLException if an error occurs setting the property.
+     * @throws SQLException Thrown if an error occurs setting the property.
      */
     private void callSetter(final Object target, final PropertyDescriptor prop, Object value)
             throws SQLException {
@@ -159,7 +159,7 @@ public class BeanProcessor {
      * @param props The property descriptors.
      * @param columnToProperty The column indices in the result set.
      * @return An initialized object.
-     * @throws SQLException if a database error occurs.
+     * @throws SQLException Thrown if a database error occurs.
      */
     private <T> T createBean(final ResultSet resultSet, final Class<T> type, final PropertyDescriptor[] props, final int[] columnToProperty)
             throws SQLException {
@@ -212,7 +212,7 @@ public class BeanProcessor {
      * information.
      *
      * @param props The bean property descriptors.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return An int[] with column index to property index mappings.  The 0th
      * element is meaningless because JDBC column indexing starts at 1.
      */
@@ -300,7 +300,7 @@ public class BeanProcessor {
      * @param <T> The type of object to create
      * @param c The Class to create an object from.
      * @return A newly created object of the Class.
-     * @throws SQLException if creation failed.
+     * @throws SQLException Thrown if creation failed.
      */
     protected <T> T newInstance(final Class<T> c) throws SQLException {
         try {
@@ -319,7 +319,7 @@ public class BeanProcessor {
      * @param resultSet The result set.
      * @param bean The bean to be populated.
      * @return An initialized object.
-     * @throws SQLException if a database error occurs.
+     * @throws SQLException Thrown if a database error occurs.
      */
     public <T> T populateBean(final ResultSet resultSet, final T bean) throws SQLException {
         final PropertyDescriptor[] props = propertyDescriptors(bean.getClass());
@@ -338,7 +338,7 @@ public class BeanProcessor {
      * @param props The property descriptors.
      * @param columnToProperty The column indices in the result set.
      * @return An initialized object.
-     * @throws SQLException if a database error occurs.
+     * @throws SQLException Thrown if a database error occurs.
      */
     private <T> T populateBean(final ResultSet resultSet, final T bean,
             final PropertyDescriptor[] props, final int[] columnToProperty)
@@ -388,7 +388,7 @@ public class BeanProcessor {
      * @param propType The bean property type that this column needs to be
      * converted into.
      *
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The object from the {@code ResultSet} at the given column
      * index after optional type processing or {@code null} if the column
      * value was SQL NULL.
@@ -412,7 +412,7 @@ public class BeanProcessor {
      *
      * @param c The Class to retrieve PropertyDescriptors for.
      * @return A PropertyDescriptor[] describing the Class.
-     * @throws SQLException if introspection failed.
+     * @throws SQLException Thrown if introspection failed.
      */
     private PropertyDescriptor[] propertyDescriptors(final Class<?> c)
         throws SQLException {
@@ -460,7 +460,7 @@ public class BeanProcessor {
      * @param <T> The type of bean to create
      * @param rs ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The newly created bean
      */
     public <T> T toBean(final ResultSet rs, final Class<? extends T> type) throws SQLException {
@@ -499,7 +499,7 @@ public class BeanProcessor {
      * @param <T> The type of bean to create
      * @param resultSet ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The newly created List of beans
      */
     public <T> List<T> toBeanList(final ResultSet resultSet, final Class<? extends T> type) throws SQLException {

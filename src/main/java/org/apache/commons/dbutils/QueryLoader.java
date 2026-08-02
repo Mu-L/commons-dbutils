@@ -72,7 +72,7 @@ public class QueryLoader {
      * This is <strong>not</strong> a file system path.  If you had a jarred
      * Queries.properties file in the com.yourcorp.app.jdbc package you would
      * pass "/com/yourcorp/app/jdbc/Queries.properties" to this method.
-     * @throws IOException if a file access error occurs
+     * @throws IOException Thrown if a file access error occurs
      * @throws IllegalArgumentException if the ClassLoader can't find a file at
      * the given path.
      * @throws java.util.InvalidPropertiesFormatException if the XML properties file is
@@ -99,7 +99,7 @@ public class QueryLoader {
      * must use a {@code .xml} file extension.
      *
      * @param path The path that the ClassLoader will use to find the file.
-     * @throws IOException if a file access error occurs
+     * @throws IOException Thrown if a file access error occurs
      * @throws IllegalArgumentException if the ClassLoader can't find a file at
      * @return Map of query names to SQL values
      * the given path.

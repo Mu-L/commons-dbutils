@@ -33,7 +33,7 @@ public interface ColumnHandler<T> {
      * @param resultSet   The source result set. This must be on the correct row.
      * @param columnIndex The position of the column to retrieve, a 1-based index.
      * @return The converted value or the original value if something doesn't work out.
-     * @throws SQLException if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set
+     * @throws SQLException Thrown if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set
      */
     T apply(ResultSet resultSet, int columnIndex) throws SQLException;
 

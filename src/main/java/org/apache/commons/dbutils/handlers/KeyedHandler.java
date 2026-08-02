@@ -130,7 +130,7 @@ public class KeyedHandler<K> extends AbstractKeyedHandler<K, Map<String, Object>
      *
      * @param rs ResultSet to create a key from
      * @return Object from the configured key column name/index
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @throws ClassCastException if the class datatype does not match the column type
      */
     // We assume that the user has picked the correct type to match the column
@@ -152,7 +152,7 @@ public class KeyedHandler<K> extends AbstractKeyedHandler<K, Map<String, Object>
      *
      * @param resultSet ResultSet to create a row from
      * @return Object typed Map containing column names to values
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     @Override
     protected Map<String, Object> createRow(final ResultSet resultSet) throws SQLException {

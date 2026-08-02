@@ -89,7 +89,7 @@ public class ScalarHandler<T> implements ResultSetHandler<T> {
      * @return The column or {@code null} if there are no rows in
      * the {@code ResultSet}.
      *
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @throws ClassCastException if the class datatype does not match the column type
      * @see org.apache.commons.dbutils.ResultSetHandler#handle(java.sql.ResultSet)
      */

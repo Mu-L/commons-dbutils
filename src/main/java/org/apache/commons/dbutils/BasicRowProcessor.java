@@ -193,7 +193,7 @@ public class BasicRowProcessor implements RowProcessor {
      *
      * @see org.apache.commons.dbutils.RowProcessor#toArray(java.sql.ResultSet)
      * @param resultSet ResultSet that supplies the array data
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The newly created array
      */
     @Override
@@ -218,7 +218,7 @@ public class BasicRowProcessor implements RowProcessor {
      * @param <T> The type of bean to create
      * @param resultSet ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The newly created bean
      */
     @Override
@@ -235,7 +235,7 @@ public class BasicRowProcessor implements RowProcessor {
      * @param <T> The type of bean to create
      * @param resultSet ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return A {@code List} of beans with the given type in the order
      * they were returned by the {@code ResultSet}.
      */
@@ -256,7 +256,7 @@ public class BasicRowProcessor implements RowProcessor {
      *
      * @param resultSet ResultSet that supplies the map data
      * @return The newly created Map
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @see org.apache.commons.dbutils.RowProcessor#toMap(java.sql.ResultSet)
      */
     @Override

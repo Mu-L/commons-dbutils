@@ -107,7 +107,7 @@ public class OutParameter<T> {
      *
      * @param stmt The statement the parameter should register on.
      * @param index The (1-based) index of the parameter.
-     * @throws SQLException if the parameter could not be registered, or if the
+     * @throws SQLException Thrown if the parameter could not be registered, or if the
      * value of the parameter could not be set.
      */
     void register(final CallableStatement stmt, final int index) throws SQLException {

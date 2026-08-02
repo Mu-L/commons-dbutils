@@ -60,7 +60,7 @@ public class MapListHandler extends AbstractListHandler<Map<String, Object>> {
      *
      * @param resultSet {@code ResultSet} to process.
      * @return A {@code Map}, never null.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @see org.apache.commons.dbutils.handlers.AbstractListHandler#handle(ResultSet)
      */
     @Override

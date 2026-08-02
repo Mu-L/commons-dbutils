@@ -69,7 +69,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
          * The actual call to executeBatch.
          *
          * @return An array of update counts containing one element for each command in the batch.
-         * @throws SQLException if a database access error occurs or one of the commands sent to the database fails.
+         * @throws SQLException Thrown if a database access error occurs or one of the commands sent to the database fails.
          * @see PreparedStatement#executeBatch()
          */
         @Override
@@ -129,7 +129,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
          * The actual call to {@code handle()} method.
          *
          * @return An array of update counts containing one element for each command in the batch.
-         * @throws SQLException if a database access error occurs.
+         * @throws SQLException Thrown if a database access error occurs.
          * @see ResultSetHandler#handle(ResultSet)
          */
         @Override
@@ -194,7 +194,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
          *
          * @return either (1) the row count for SQL Data Manipulation Language (DML) statements or
          *                (2) 0 for SQL statements that return nothing
-         * @throws SQLException if a database access error occurs.
+         * @throws SQLException Thrown if a database access error occurs.
          * @see PreparedStatement#executeUpdate()
          */
         @Override
@@ -299,7 +299,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param params An array of query replacement parameters.  Each row in
      * this array is one set of batch replacement values.
      * @return A {@code Future} which returns the number of rows updated per statement.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public Future<int[]> batch(final Connection conn, final String sql, final Object[][] params) throws SQLException {
         return executorService.submit(() -> queryRunner.batch(conn, sql, params));
@@ -315,7 +315,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param params An array of query replacement parameters.  Each row in
      * this array is one set of batch replacement values.
      * @return A {@code Future} which returns the number of rows updated per statement.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public Future<int[]> batch(final String sql, final Object[][] params) throws SQLException {
         return executorService.submit(() -> queryRunner.batch(sql, params));
@@ -330,7 +330,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param rsh {@link ResultSetHandler} for handling the results
      * @return {@link Future} that executes a query runner insert
      * @see QueryRunner#insert(Connection, String, ResultSetHandler)
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @since 1.6
      */
     public <T> Future<T> insert(final Connection conn, final String sql, final ResultSetHandler<T> rsh) throws SQLException {
@@ -347,7 +347,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param params Parameter values for substitution in the SQL statement
      * @return {@link Future} that executes a query runner insert
      * @see QueryRunner#insert(Connection, String, ResultSetHandler, Object...)
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @since 1.6
      */
     public <T> Future<T> insert(final Connection conn, final String sql, final ResultSetHandler<T> rsh, final Object... params) throws SQLException {
@@ -362,7 +362,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param rsh {@link ResultSetHandler} for handling the results
      * @return {@link Future} that executes a query runner insert
      * @see QueryRunner#insert(String, ResultSetHandler)
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @since 1.6
      */
     public <T> Future<T> insert(final String sql, final ResultSetHandler<T> rsh) throws SQLException {
@@ -378,7 +378,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param params Parameter values for substitution in the SQL statement
      * @return {@link Future} that executes a query runner insert
      * @see QueryRunner#insert(String, ResultSetHandler, Object...)
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @since 1.6
      */
     public <T> Future<T> insert(final String sql, final ResultSetHandler<T> rsh, final Object... params) throws SQLException {
@@ -396,7 +396,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      *        this array is one set of batch replacement values.
      * @return {@link Future} that executes a query runner batch insert
      * @see QueryRunner#insertBatch(Connection, String, ResultSetHandler, Object[][])
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @since 1.6
      */
     public <T> Future<T> insertBatch(final Connection conn, final String sql, final ResultSetHandler<T> rsh, final Object[][] params) throws SQLException {
@@ -413,7 +413,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      *        this array is one set of batch replacement values.
      * @return {@link Future} that executes a query runner batch insert
      * @see QueryRunner#insertBatch(String, ResultSetHandler, Object[][])
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @since 1.6
      */
     public <T> Future<T> insertBatch(final String sql, final ResultSetHandler<T> rsh, final Object[][] params) throws SQLException {
@@ -429,7 +429,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param sql The query to execute.
      * @param rsh The handler that converts the results into an object.
      * @return A {@code Future} which returns the result of the query call.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public <T> Future<T> query(final Connection conn, final String sql, final ResultSetHandler<T> rsh) throws SQLException {
         return executorService.submit(() -> queryRunner.query(conn, sql, rsh));
@@ -445,7 +445,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param rsh The handler that converts the results into an object.
      * @param params The replacement parameters.
      * @return A {@code Future} which returns the result of the query call.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public <T> Future<T> query(final Connection conn, final String sql, final ResultSetHandler<T> rsh, final Object... params)
             throws SQLException {
@@ -463,7 +463,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * the {@code ResultSet}.
      *
      * @return A {@code Future} which returns the result of the query call.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public <T> Future<T> query(final String sql, final ResultSetHandler<T> rsh) throws SQLException {
         return executorService.submit(() -> queryRunner.query(sql, rsh));
@@ -481,7 +481,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param params Initialize the PreparedStatement's IN parameters with
      * this array.
      * @return A {@code Future} which returns the result of the query call.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public <T> Future<T> query(final String sql, final ResultSetHandler<T> rsh, final Object... params) throws SQLException {
         return executorService.submit(() -> queryRunner.query(sql, rsh, params));
@@ -494,7 +494,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param conn The connection to use to run the query.
      * @param sql The SQL to execute.
      * @return A {@code Future} which returns the number of rows updated.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public Future<Integer> update(final Connection conn, final String sql) throws SQLException {
         return executorService.submit(() -> Integer.valueOf(queryRunner.update(conn, sql)));
@@ -508,7 +508,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param sql The SQL to execute.
      * @param param The replacement parameter.
      * @return A {@code Future} which returns the number of rows updated.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public Future<Integer> update(final Connection conn, final String sql, final Object param) throws SQLException {
         return executorService.submit(() -> Integer.valueOf(queryRunner.update(conn, sql, param)));
@@ -521,7 +521,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param sql The SQL to execute.
      * @param params The query replacement parameters.
      * @return A {@code Future} which returns the number of rows updated.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     public Future<Integer> update(final Connection conn, final String sql, final Object... params) throws SQLException {
         return executorService.submit(() -> Integer.valueOf(queryRunner.update(conn, sql, params)));
@@ -535,7 +535,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * not be saved.
      *
      * @param sql The SQL statement to execute.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return A {@code Future} which returns the number of rows updated.
      */
     public Future<Integer> update(final String sql) throws SQLException {
@@ -551,7 +551,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      *
      * @param sql The SQL statement to execute.
      * @param param The replacement parameter.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return A {@code Future} which returns the number of rows updated.
      */
     public Future<Integer> update(final String sql, final Object param) throws SQLException {
@@ -567,7 +567,7 @@ public class AsyncQueryRunner extends AbstractQueryRunner {
      * @param sql The SQL statement to execute.
      * @param params Initializes the PreparedStatement's IN (i.e. '?')
      * parameters.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return A {@code Future} which returns the number of rows updated.
      */
     public Future<Integer> update(final String sql, final Object... params) throws SQLException {

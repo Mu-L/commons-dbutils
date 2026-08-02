@@ -50,7 +50,7 @@ public abstract class AbstractKeyedHandler<K, V> implements ResultSetHandler<Map
      *
      * @param resultSet ResultSet to create a key from
      * @return K from the configured key column name/index
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected abstract K createKey(ResultSet resultSet) throws SQLException;
 
@@ -71,7 +71,7 @@ public abstract class AbstractKeyedHandler<K, V> implements ResultSetHandler<Map
      *
      * @param resultSet ResultSet to create a row from
      * @return V object created from the current row
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected abstract V createRow(ResultSet resultSet) throws SQLException;
 
@@ -81,7 +81,7 @@ public abstract class AbstractKeyedHandler<K, V> implements ResultSetHandler<Map
      *
      * @param resultSet {@code ResultSet} to process.
      * @return A {@code Map}, never {@code null}.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @see org.apache.commons.dbutils.ResultSetHandler#handle(java.sql.ResultSet)
      */
     @Override

@@ -33,7 +33,7 @@ public interface ResultSetHandler<T> {
      * @param resultSet The {@link ResultSet} to handle. It has not been touched before being passed to this method.
      * @return An Object initialized with {@code ResultSet} data. It is legal for implementations to return {@code null} if the {@link ResultSet} contained 0
      *         rows.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     T handle(ResultSet resultSet) throws SQLException;
 }

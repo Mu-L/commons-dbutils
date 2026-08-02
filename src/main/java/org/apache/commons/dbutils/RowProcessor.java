@@ -39,7 +39,7 @@ public interface RowProcessor {
      * the {@code ResultSet}.
      *
      * @param resultSet ResultSet that supplies the array data
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The newly created array
      */
     Object[] toArray(ResultSet resultSet) throws SQLException;
@@ -53,7 +53,7 @@ public interface RowProcessor {
      * @param <T> The type of bean to create
      * @param resultSet ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The newly created bean
      */
     <T> T toBean(ResultSet resultSet, Class<? extends T> type) throws SQLException;
@@ -66,7 +66,7 @@ public interface RowProcessor {
      * @param <T> The type of bean to create
      * @param resultSet ResultSet that supplies the bean data
      * @param type Class from which to create the bean instance
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return A {@code List} of beans with the given type in the order
      * they were returned by the {@code ResultSet}.
      */
@@ -80,7 +80,7 @@ public interface RowProcessor {
      * alter the row position of the {@code ResultSet}.
      *
      * @param resultSet ResultSet that supplies the map data
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @return The newly created Map
      */
     Map<String, Object> toMap(ResultSet resultSet) throws SQLException;

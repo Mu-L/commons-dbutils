@@ -53,7 +53,7 @@ class StringTrimmedResultSetTest extends BaseTestCase {
     /**
      * Make sure 2 wrappers work together.
      *
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     @Test
     void testMultipleWrappers() throws Exception {

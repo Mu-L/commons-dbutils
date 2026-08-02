@@ -73,7 +73,7 @@ public class BeanListHandler<T> implements ResultSetHandler<List<T>> {
      *
      * @param resultSet The {@code ResultSet} to handle.
      * @return A List of beans, never {@code null}.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @see org.apache.commons.dbutils.RowProcessor#toBeanList(ResultSet, Class)
      */
     @Override

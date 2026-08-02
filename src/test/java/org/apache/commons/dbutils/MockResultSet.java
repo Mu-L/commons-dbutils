@@ -84,7 +84,7 @@ public class MockResultSet implements InvocationHandler {
      *
      * @param args
      * @return A column index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     private int columnIndex(final Object[] args) throws SQLException {
         if (args[0] instanceof Integer) {
@@ -100,7 +100,7 @@ public class MockResultSet implements InvocationHandler {
      * Returns the column index for the given column name.
      *
      * @return A 1 based index
-     * @throws SQLException if the column name is invalid
+     * @throws SQLException Thrown if the column name is invalid
      */
     private int columnNameToIndex(final String columnName) throws SQLException {
         if (currentRow == null) {
@@ -119,7 +119,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the boolean value at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getBoolean(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -135,7 +135,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the byte value at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getByte(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -151,7 +151,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the double value at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getDouble(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -167,7 +167,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the float value at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getFloat(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -183,7 +183,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the int value at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getInt(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -199,7 +199,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the long value at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getLong(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -222,7 +222,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the object at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getObject(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -234,7 +234,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the short value at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected Object getShort(final int columnIndex) throws SQLException {
         final Object obj = getValueAt(columnIndex);
@@ -250,7 +250,7 @@ public class MockResultSet implements InvocationHandler {
      * Gets the String at the given column index.
      *
      * @param columnIndex A 1 based index.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      */
     protected String getString(final int columnIndex) throws SQLException {
         final Object obj = getObject(columnIndex);

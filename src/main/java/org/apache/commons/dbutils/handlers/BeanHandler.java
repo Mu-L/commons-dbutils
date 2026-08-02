@@ -72,7 +72,7 @@ public class BeanHandler<T> implements ResultSetHandler<T> {
      * @param resultSet {@code ResultSet} to process.
      * @return An initialized JavaBean or {@code null} if there were no
      * rows in the {@code ResultSet}.
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @see org.apache.commons.dbutils.ResultSetHandler#handle(java.sql.ResultSet)
      */
     @Override

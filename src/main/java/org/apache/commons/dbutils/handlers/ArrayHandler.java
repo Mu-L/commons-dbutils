@@ -75,7 +75,7 @@ public class ArrayHandler implements ResultSetHandler<Object[]> {
      * @return An Object[]. If there are no rows in the {@code ResultSet}
      * an empty array will be returned.
      *
-     * @throws SQLException if a database access error occurs
+     * @throws SQLException Thrown if a database access error occurs
      * @see org.apache.commons.dbutils.ResultSetHandler#handle(java.sql.ResultSet)
      */
     @Override
