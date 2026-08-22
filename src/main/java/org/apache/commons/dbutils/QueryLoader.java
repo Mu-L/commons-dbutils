@@ -22,6 +22,9 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.regex.Pattern;
 
 /**
@@ -52,7 +55,7 @@ public class QueryLoader {
     /**
      * Maps query set names to Maps of their queries.
      */
-    private final Map<String, Map<String, String>> queries = new HashMap<>();
+    private final ConcurrentMap<String, Map<String, String>> queries = new ConcurrentHashMap<>();
 
     /**
      * QueryLoader constructor.
@@ -72,11 +75,18 @@ public class QueryLoader {
      * @return Map of query names to SQL values
      * @see java.util.Properties
      */
-    public synchronized Map<String, String> load(final String path) throws IOException {
-        Map<String, String> queryMap = this.queries.get(path);
-        if (queryMap == null) {
-            queryMap = loadQueries(path);
-            this.queries.put(path, queryMap);
+    public Map<String, String> load(final String path) throws IOException {
+        final AtomicReference<IOException> ioe = new AtomicReference<>();
+        final Map<String, String> queryMap = queries.computeIfAbsent(path, p -> {
+            try {
+                return loadQueries(p);
+            } catch (final IOException e) {
+                ioe.set(e);
+                return null;
+            }
+        });
+        if (ioe.get() != null) {
+            throw ioe.get();
         }
         return queryMap;
     }
@@ -118,7 +128,7 @@ public class QueryLoader {
      *
      * @param path The path that the queries were loaded from.
      */
-    public synchronized void unload(final String path) {
-        this.queries.remove(path);
+    public void unload(final String path) {
+        queries.remove(path);
     }
 }
